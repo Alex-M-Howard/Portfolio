@@ -1,0 +1,186 @@
+.active{
+    font-weight: 600;
+    color: rgb(248, 126, 126) !important
+}
+
+.hidden{
+    display: none;
+}
+
+.box{
+    box-shadow: 1px 1px rgb(45, 44, 44);
+}
+
+.navbar{
+    background-color: rgb(66, 65, 65);
+}
+
+.nav-link {
+    
+    color: #FFF;
+}
+.nav-link:hover {
+    
+    color: #82ecbaa8;
+}
+
+.navbar-nav .nav-link.active{
+    color: #FFF;
+}
+
+#alex-logo {
+    height: 60px;
+    width: auto !important;
+    bottom: 0px;
+}
+
+#dropdown{
+    color: #FFF;
+    border: none;
+}
+
+#nav-drop{
+    color: rgb(66, 65, 65);;
+}
+
+.dropdown-submenu{
+  background-color: rgb(248, 248, 248);
+}
+
+.dropdown-menu li {
+position: relative;
+}
+.dropdown-menu .dropdown-submenu {
+display: none;
+position: absolute;
+left: 100%;
+top: -7px;
+}
+.dropdown-menu .dropdown-submenu-left {
+right: 100%;
+left: auto;
+}
+.dropdown-menu > li:hover > .dropdown-submenu {
+display: block;
+}
+.dropdown-item:hover{
+    background-color: #b0c0d1;
+    
+}
+
+#dropdown:hover{
+    color: #b0c0d1;
+}
+
+
+
+
+#hamburger{
+   color: #FFF !important;
+}
+
+#hamburger:active{
+  color: rgb(248, 126, 126)!important;
+}
+
+#hamburger:hover{
+  color: #82ecbaa8 !important;
+}
+
+
+
+
+
+#nestexplorer{
+    width: auto;
+    height: 250px;
+}
+
+.btn.btn-primary{
+  background-color: #35c176 !important;
+  color: white;
+  font-weight: 600;
+  font-size: 1.15rem;
+  border: none;
+}
+
+
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#sticky-footer{
+  display: flex;
+  background-color: rgb(66, 65, 65);;
+  color: white;
+  height: auto;
+  margin-top: auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0rem;
+}
+
+
+.typing {
+  width: 17ch;
+  animation: typing 2s steps(17), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+
+
+#social{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #3c3d3f;
+    color: white;
+
+}
+
+#social-pic{
+    height: 250px !important;
+    width: 200px !important;
+    border-radius: 100% !important;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    top: 150px;
+}
+
+
+#profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    top: 50px;
+}

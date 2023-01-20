@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <script src="https://kit.fontawesome.com/22a73e52cb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/styles.css">
+    {% block style %}{% endblock %}
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <a class="nav-link" href="/">
+        <img src="/static/images/dark_banner-noback.png" alt="Bootstrap" class="navbar-brand" id="alex-logo">
+      </a>
+      <button id='hamburger-button' class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars me-5" id="hamburger"></i>
+      </button>
+
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        
+        <ul class="navbar-nav mb-2 mb-lg-0 mx-auto">
+          <li class="mx-3"><a class="nav-link" href="{{url_for('home')}}" id="explorer-nav">Portfolio Home</a></li>
+          <li class="mx-3"><a class="nav-link" href="https://thyme2eat.up.railway.app" id="explorer-nav">Capstone 1: Thyme2Eat (Oct 2022)</a></li>
+          <li class="mx-3"><a class="nav-link" href="https://production-hub-production.up.railway.app" id="explorer-nav">Production Hub Project (Jan 2023)</a></li>
+          <li class="mx-3"><a class="nav-link" href="{{url_for('resume')}}" id="explorer-nav">Resume</a></li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </nav>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="/static/bootstrap/bootstrap.bundle.js"></script>
+  {% block content %}{% endblock %}
+  
+</body>
+</html>
