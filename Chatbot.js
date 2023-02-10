@@ -12,6 +12,12 @@ const Chatbot = () => {
   const handleSubmit = async event => {
     event.preventDefault();
     const apiKey = 'your_api_key_here';
+
+    if (input.toLowerCase().includes("hire")) {
+      setResponse("If you're thinking of hiring Alex Howard, you're on the step to a better life!");
+      return;
+    }
+
     try {
       const res = await axios.post('https://api.openai.com/v1/engines/davinci/jobs', {
         prompt: input,
