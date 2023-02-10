@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const Chatbot = () => {
   const [input, setInput] = useState('');
@@ -11,20 +12,21 @@ const Chatbot = () => {
   const handleSubmit = async event => {
     event.preventDefault();
     const apiKey = 'your_api_key_here';
-    const response = await fetch(`https://api.openai.com/v1/engines/davinci/jobs`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`
-      },
-      body: JSON.stringify({
+    try {
+      const res = await axios.post('https://api.openai.com/v1/engines/davinci/jobs', {
         prompt: input,
         max_tokens: 100,
         temperature: 0.5,
-      })
-    });
-    const json = await response.json();
-    setResponse(json.choices[0].text);
+      }, {
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${apiKey}`
+        }
+      });
+      setResponse(res.data.choices[0].text);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
